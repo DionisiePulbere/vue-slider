@@ -61,6 +61,7 @@ createApp({
                 }
             ],
             activeImage: 0,
+            auto: null,
         }
 
     },
@@ -79,6 +80,17 @@ createApp({
             } else {
                 this.activeImage = this.slides.length - 1;
             }
-        }
+        },
+
+        thisActive: function(index){
+            this.activeImage = index;
+        },
+
+        autoPlay: function(){
+            this.auto = setInterval(this.showNext, 3000)
+        },
+    },
+    mounted(){
+        this.autoPlay();
     }
 }).mount("#app")
