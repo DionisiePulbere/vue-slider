@@ -61,7 +61,7 @@ createApp({
                 }
             ],
             activeImage: 0,
-            auto: null,
+            auto: "",
         }
 
     },
